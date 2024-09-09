@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dashboard-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type=text], input[type=email], input[type=date], input[type=tel], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        button[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Student Dashboard</h1>
+        <form action="addstudent.jsp" method="post">
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+            <label for="studentEmail">Email:</label>
+            <input type="email" id="studentEmail" name="studentEmail" required>
+            <label for="studentBirthDate">Birth Date:</label>
+            <input type="date" id="studentBirthDate" name="studentBirthDate" required>
+            <label for="studentAddress">Address:</label>
+            <input type="text" id="studentAddress" name="studentAddress" required>
+            <label for="studentPhone">Phone:</label>
+            <input type="tel" id="studentPhone" name="studentPhone" required>
+            <label for="studentGender">Gender:</label>
+            <select id="studentGender" name="studentGender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="studentClass">Class:</label>
+            <input type="text" id="studentClass" name="studentClass" required>
+            <button type="submit">Add Student</button>
+        </form>
+    </div>
+</body>
+</html>
